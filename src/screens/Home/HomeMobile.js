@@ -26,6 +26,10 @@ const HomeMobile = () => (
                         <TextCard>{text}</TextCard>
                     </StyledCard>
                 ))}
+                <p className="encouragement">
+                    Vous n'êtes pas seule(e), ensemble nous allons passer la crise et ressortir
+                    plus forts.
+                </p>
             </CardContainer>
             <AboutContainer>
                 <p className="question">Qui est derrière AntiCovid ?</p>
@@ -63,6 +67,13 @@ const CardContainer = styled(BaseCard)`
         font-weight: bold;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .encouragement {
+        margin-bottom: 0px;
+        padding: 0px 20px;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: bold;
     }
 `
 
