@@ -7,11 +7,13 @@ import BaseButton from "./Button";
 import { PLAN_HREF, PLANS } from "../constants/routes";
 
 import { disqusShortname, getDisqusConfig } from "../helpers/disqus";
+import { DARKGRAY, BOXSHADOW} from "@constants/style";
 
 const StyledPlanCard = styled.div`
     border-radius: 18px;
     overflow: hidden;
     background-color: white;
+    box-shadow: ${BOXSHADOW};
 `;
 
 const Header = styled.div`
@@ -22,10 +24,12 @@ const Header = styled.div`
 `;
 
 const Container = styled.div`
-    padding: 20px 60px;
-    font-size: 12px;
-    text-align: justify;
-    line-height: 14px;
+    padding: 20px 30px;
+    @media only screen and (min-width: 768px) {
+        padding: 20px 60px;
+        font-size: 12px;
+    }
+
 `;
 
 const CommentDiv = styled.div`

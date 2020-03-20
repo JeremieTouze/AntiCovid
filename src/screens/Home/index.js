@@ -1,8 +1,8 @@
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 import Page from "@components/Page";
 import HomeImage from "./Image";
 import HomeDescription from "./Description";
 import HomeMobile from "./HomeMobile";
-import { Breakpoint, BreakpointProvider } from 'react-socks';
 
 const Home = () => {
     return (
