@@ -36,15 +36,8 @@ export default function Page({ title, children }) {
                 <title>{title}</title>
             </Head>
             <Body>
-                <BreakpointProvider>
-                    <Breakpoint small down>
-                        <HeaderMobile />
-                    </Breakpoint>
-                    <Breakpoint medium up>
-                        <Header />
-                    </Breakpoint>
-                </BreakpointProvider>
-                    <Container>{children}</Container>
+                <Header title={title} />
+                <Container>{children}</Container>
                 {/* <Header />
                 <Container>{children}</Container> */}
             </Body>
