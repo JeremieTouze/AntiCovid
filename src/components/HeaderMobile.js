@@ -6,23 +6,29 @@ import { NAVLINKS, CONTACT, HOME } from "@constants/routes";
 import { ORANGE } from "@constants/style";
 
 import Logo from "./Logo";
-import BaseButton from "./Button";
+import Title from "./Title";
 
-export default function HeaderMobile() {
+export default function HeaderMobile({ title }) {
     const router = useRouter();
 
     return (
         <Container>
             <Row align="middle" className="text-center">
-
-                <Col
-                    xs={{ span: 24, order: 1 }}
-                    sm={{ span: 24, order: 1 }}
-                    lg={{ order: 2, span: 12 }}
-                >
+                <Col span={1}>
                     <div onClick={() => router.push(HOME)} className="cursor-pointer">
-                        <Logo />
+                        <p>=</p>
                     </div>
+                </Col>
+                <Col span={22}>
+                    {title === "Accueil" ? (
+                        <div onClick={() => router.push(HOME)} className="cursor-pointer">
+                            <Logo />
+                        </div>) : (
+                            <div>
+                                <Title>{title}</Title>
+                            </div>
+                        )
+                    }
                 </Col>
             </Row>
         </Container>
@@ -31,17 +37,6 @@ export default function HeaderMobile() {
 
 const Container = styled.header`
     padding: 10px 15px;
-`;
-
-const ContactButton = styled(BaseButton)`
-    padding: 0 30px;
-    transition: all 0.5s;
-
-    &:hover {
-        color: ${ORANGE};
-        border: 1px solid ${ORANGE};
-        background-color: white;
-    }
 `;
 
 const Link = styled.a`
