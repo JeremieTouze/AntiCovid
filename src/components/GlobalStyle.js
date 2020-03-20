@@ -21,14 +21,23 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${FONT_FAMILY};
         color:${BLUE};
       
-        background-color: white;
-        background-image: url('/backgroundWave.png');
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-position: left top;
 
-        height:100%;
-        overflow:hidden;
+
+        @media only screen and (max-width: 768px) {
+            background-image: url('/backgroundWaveMobile.png');
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 100% auto ;
+        }
+        @media only screen and (min-width: 768px) {
+            background-color: white;
+            background-image: url('/backgroundWave.png');
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: left top;
+            height:100%;
+            overflow:hidden;
+        }
     }
 
     .ant-layout{
