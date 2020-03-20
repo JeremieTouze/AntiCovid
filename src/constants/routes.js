@@ -11,3 +11,9 @@ export const NAVLINKS = [
     { href: BLOG, label: "BLOG" }
     // { href: CONTACT, label: "Contact" }
 ];
+export const NAVLINKSMENUMOBILE = [
+    { href: HOME, label: "ACCUEIL", icon: "/homeWhiteIcon.png" },
+    { href: PLANS, label: "MES AIDES", icon: "/communityWhiteIcon.png"},
+    { href: BLOG, label: "BLOG", icon: "/blogWhiteIcon.png" },
+    { href: CONTACT, label: "CONTACT", icon: "/contactWhiteIcon.png" }
+];

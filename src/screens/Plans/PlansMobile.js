@@ -35,27 +35,6 @@ const accordionData = [
             "Nouvelle-Aquitaine",
             "Corse"
         ]
-    },
-    {
-        title: "Localisation géographique",
-        key: "localization2",
-        Icon: EnvironmentFilled,
-        data: [
-            "DOM",
-            "Auvergne - Rhônes - Alpes",
-            "Hauts de France",
-            "Bretagne",
-            "Grand-Est",
-            "PACA",
-            "Pays de la Loire",
-            "Occitanie",
-            "Bourgogne-Franche-Comté",
-            "Centre Val-De-Loire",
-            "Ile-de-France",
-            "Normandie",
-            "Nouvelle-Aquitaine",
-            "Corse"
-        ]
     }
 ];
 

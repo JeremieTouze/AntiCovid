@@ -38,10 +38,12 @@ const DescriptionCard = ({ recordId }) => {
                             <Time>{data["Updated"]}</Time>
                             <Container>
                                 <p>{data["Description"]}</p>
-                                {components.map((Component, index) => (
-                                    <Component key={index} data={data}/>
-                                ))}
-
+                                <Info>
+                                    {components.map((Component, index) => (
+                                        <Component key={index} data={data}/>
+                                    ))}
+                                </Info>
+      
                                 <Disqus.DiscussionEmbed
                                     shortname={disqusShortname}
                                     config={getDisqusConfig(recordId)}
@@ -101,5 +103,11 @@ const Container = styled.div`
     text-align: justify;
     line-height: 14px;
 `;
+const Info= styled.div`
+    @media screen and (max-width: 576px) {
+        font-size: 12px !important;
+        text-align: left;
+    }
+`
 
 export default DescriptionCard;

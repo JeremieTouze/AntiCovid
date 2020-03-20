@@ -1,3 +1,4 @@
+import styled from "styled-components";
 const infos = ["Localisation géographique", "Organisme", "Contact", "Adresse mail"];
 
 const DescriptionInfos = ({ data }) =>
@@ -6,15 +7,17 @@ const DescriptionInfos = ({ data }) =>
             {data[info] ? (
                 <p style={{ fontWeight: "bold" }}>
                     {info}:{" "}
-                    <span
-                        style={{ color: "white", padding: "5px 10px", borderRadius: 10 , whiteSpace: "nowrap"}}
-                        className="bg-green"
-                    >
+                    <InfoValue className="bg-green">
                         {data[info]}
-                    </span>
+                    </InfoValue>
                 </p>
             ) : null}
         </React.Fragment>
     ));
 
+const InfoValue = styled.span`
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+`;
 export default DescriptionInfos;

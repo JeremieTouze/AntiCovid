@@ -17,10 +17,17 @@ const StyledPlanCard = styled.div`
 `;
 
 const Header = styled.div`
+    @media screen and (max-width: 576px) {
+        padding: 5px;
+        line-height: 20px;
+    }
+    padding: 20px 60px;
     color: white;
     font-weight: 700;
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Container = styled.div`

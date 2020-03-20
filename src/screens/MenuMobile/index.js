@@ -3,56 +3,29 @@ import { Row, Col, Card } from "antd";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Page from "@components/Page";
-import { HomeFilled, WechatFilled, PhoneFilled}  from "@ant-design/icons";
-import { HOME,PLANS, BLOG, CONTACT} from "@constants/routes";
+import { HomeFilled, WechatFilled, PhoneFilled } from "@ant-design/icons";
+import { NAVLINKSMENUMOBILE } from "@constants/routes";
 
 const MenuMobile = () => {
     const router = useRouter();
     return (
-        <Page title="MenuMobile">
+        <Page title="Menu">
             <Container justify="center" align="middle">
-                    <Row justify="center">
-                        <HomeFilled />
+                {NAVLINKSMENUMOBILE.map(({ href, label, icon}) => (
+                    <MenuItem justify="center" key={href}>
+                        <Img src={icon} />
                         <Link
                             className="text-uppercase"
-                            onClick={() => router.push(HOME)}
-
+                            key={href}
+                            onClick={() => router.push(href)}
+                            active={router.pathname === href}
                         >
-                            ACCEUIL
+                            {label}
                         </Link>
-                    </Row>
-                    <Row justify="center">
-                        <Link
-                            className="text-uppercase"
-                            onClick={() => router.push(PLANS)}
-
-                        >
-                            AIDES
-                        </Link>
-                    </Row>
-                    <Row justify="center">
-                        <WechatFilled />
-                        <Link
-                            className="text-uppercase"
-                            onClick={() => router.push(BLOG)}
-
-                            
-                        >
-                            BLOG
-                        </Link>
-                    </Row>
-                    <Row justify="center">
-                    <PhoneFilled />
-                        <Link
-                            className="text-uppercase"
-                            onClick={() => router.push(CONTACT)}
-
-                        >
-                            CONTACT
-                        </Link>
-                    </Row>
+                    </MenuItem>
+                ))}
             </Container>
-        </Page>
+        </Page >
 
 
     )
@@ -61,6 +34,15 @@ const MenuMobile = () => {
 
 const Container = styled(Col)`
 `;
+const MenuItem = styled(Row)`
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px;
+`;
+const Img = styled.img`
+    height: 30px;
+`;
+
 const Link = styled.a`
     font-size: 23px !important;
     font-weight: bold;
