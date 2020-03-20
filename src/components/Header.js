@@ -28,9 +28,8 @@ export default function Header({ title }) {
         console.log(e);
         setVisible(false)
     };
-    return (
-        
 
+    return (
         <Container>
             <MenuMobileModal visible={visible} handleOk={handleOk} handleCancel={handleCancel}/>
             <Row align="middle" className="text-center">
@@ -40,12 +39,12 @@ export default function Header({ title }) {
                     lg={{ span: 0, order: 1 }}
 
                 >
-                    <div onClick={() => showModal()} className="cursor-pointer" style={{ width: "auto", height: "auto" }}>
-                        <MenuOutlined style={{ fontSize: 30 }} />
-                    </div>
-                    {/* <div onClick={() => router.push(MENUMOBILE)} className="cursor-pointer" style={{ width: "auto", height: "auto" }}>
+                    {/* <div onClick={() => showModal()} className="cursor-pointer" style={{ width: "auto", height: "auto" }}>
                         <MenuOutlined style={{ fontSize: 30 }} />
                     </div> */}
+                    <div onClick={() => router.push(MENUMOBILE)} className="cursor-pointer" style={{ width: "auto", height: "auto" }}>
+                        <MenuOutlined style={{ fontSize: 30 }} />
+                    </div>
                 </Col>
                 <Col
                     xs={{ span: 0, order: 3 }}
