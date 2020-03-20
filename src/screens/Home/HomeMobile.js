@@ -28,13 +28,6 @@ const HomeMobile = () => (
                     </StyledCard>
                 ))}
             </CardContainer>
-            {/* {data.map(({ text, icon }, index) => (
-                <StyledCard key={icon}>
-                    <Img src={icon} />
-                    <TextCard>{text}</TextCard>
-                </StyledCard>
-            ))} */}
-
             <AboutContainer>
                 <p className="question">Qui est derrière AntiCovid ?</p>
                 <p className="response">
@@ -47,7 +40,6 @@ const HomeMobile = () => (
 
 
     </HomeMobileContainer>
-
 
 )
 const HomeMobileContainer = styled(Row)`
