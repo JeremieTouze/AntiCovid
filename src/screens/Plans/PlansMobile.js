@@ -125,7 +125,7 @@ const PlansMobile = ({ filters, setFilters }) => (
     </PlansMobileContainer>
 );
 const PlansMobileContainer = styled(Row)`
-    padding: 0px 30px;
+    // padding: 0px 30px;
     text-align: center;
     margin: 0px 0px !important;
 `

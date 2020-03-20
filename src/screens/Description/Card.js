@@ -73,7 +73,8 @@ const Header = styled.div`
     background-color: ${BLUE};
     color: white;
     font-weight: 700;
-    height: 40px;
+    min-height: 40px;
+    // height: 40px;
     line-height: 40px;
     text-align: center;
 `;
@@ -92,6 +93,9 @@ const Time = styled.div`
 `;
 
 const Container = styled.div`
+@media screen and (max-width: 576px) {
+    padding: 20px 30px;
+}
     padding: 20px 60px;
     font-size: 12px;
     text-align: justify;

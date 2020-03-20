@@ -25,9 +25,9 @@ const Header = styled.div`
 
 const Container = styled.div`
     padding: 20px 30px;
+    font-size: 12px;
     @media only screen and (min-width: 768px) {
         padding: 20px 60px;
-        font-size: 12px;
     }
 
 `;
@@ -43,8 +43,11 @@ const CommentDiv = styled.div`
 `;
 
 const PlanButton = styled(BaseButton)`
-    padding: 0 70px;
+    padding: 0 30px;
     margin: auto;
+    @media only screen and (min-width: 768px) {
+        padding: 0 70px;
+    }
 `;
 
 export default function PlanCard({ name, description, planId }) {

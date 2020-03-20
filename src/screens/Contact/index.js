@@ -2,7 +2,6 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 
 import Page from "@components/Page";
-
 import ContactForm from "./Form";
 import NewPlanButton from "@components/NewPlanButton";
 
@@ -17,8 +16,8 @@ const Contact = () => (
                     <Col span={24}>
                         <ContactForm />
                     </Col>
-                    <Col span={24} className="text-center">
-                        <NewPlanButton />
+                    <Col span={24} className="text-center addNewPlan">
+                        <NewPlanButton className="" />
                     </Col>
                 </Row>
             </Col>
@@ -34,10 +33,18 @@ const Container = styled(Row)`
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 25px;
+        padding: 12.5px;
 
         h3 {
             font-size: 50px;
+        }
+        .addNewPlan{
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: auto;
         }
     }
 `;

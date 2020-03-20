@@ -46,7 +46,7 @@ const HomeMobile = () => (
 
 )
 const HomeMobileContainer = styled(Row)`
-    padding: 0px 30px;
+    // padding: 0px 30px;
     margin: 0px 0px !important;
 `
 const DescriptionContainer = styled.span`
