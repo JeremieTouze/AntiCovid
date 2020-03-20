@@ -3,8 +3,9 @@ import { Layout } from "antd";
 import styled from "styled-components";
 import Router from "next/router";
 import NProgress from "nprogress";
-
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 import Header from "./Header";
+import HeaderMobile from "./HeaderMobile";
 import { BLUE, ORANGE, FONT_FAMILY } from "../constants/style";
 
 export default function Page({ title, children }) {
@@ -35,8 +36,17 @@ export default function Page({ title, children }) {
                 <title>{title}</title>
             </Head>
             <Body>
-                <Header />
-                <Container>{children}</Container>
+                <BreakpointProvider>
+                    <Breakpoint small down>
+                        <HeaderMobile />
+                    </Breakpoint>
+                    <Breakpoint medium up>
+                        <Header />
+                    </Breakpoint>
+                </BreakpointProvider>
+                    <Container>{children}</Container>
+                {/* <Header />
+                <Container>{children}</Container> */}
             </Body>
         </>
     );
