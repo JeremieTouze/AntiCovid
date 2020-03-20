@@ -16,7 +16,6 @@ const Home = () => {
                     <HomeDescription />
                 </Breakpoint>
             </BreakpointProvider>
-
         </Page>
     )
 }
