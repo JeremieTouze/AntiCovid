@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Row, Col } from "antd";
+import { MenuOutlined } from '@ant-design/icons';
 import { useRouter } from "next/router";
 
 import { NAVLINKS, CONTACT, HOME } from "@constants/routes";
@@ -21,7 +22,7 @@ export default function Header({ title }) {
                     lg={{ span: 0, order: 1 }}
                 >
                     <div onClick={() => router.push(HOME)} className="cursor-pointer">
-                        <p>=</p>
+                        <MenuIcon />
                     </div>
                 </Col>
                 <Col
@@ -39,7 +40,7 @@ export default function Header({ title }) {
                 <Col
                     xs={{ span: 0, order: 2 }}
                     sm={{ span: 24, order: 1 }}
-                    lg={{ span: 12, order: 2  }}
+                    lg={{ span: 12, order: 2 }}
                 >
                     <div onClick={() => router.push(HOME)} className="cursor-pointer">
                         <Logo />
@@ -48,9 +49,9 @@ export default function Header({ title }) {
                 <Col
                     xs={{ span: 22, order: 2 }}
                     sm={{ span: 0, order: 1 }}
-                    lg={{ span: 0, order: 2  }}
+                    lg={{ span: 0, order: 2 }}
                 >
-                      {title === "Accueil" ? (
+                    {title === "Accueil" ? (
                         <div onClick={() => router.push(HOME)} className="cursor-pointer">
                             <Logo />
                         </div>) : (
@@ -105,4 +106,9 @@ const Link = styled.a`
 
     color: ${props => (props.active ? `${ORANGE} !important` : "initial")};
     font-weight: ${props => (props.active ? `bold` : "initial")};
+`;
+
+const MenuIcon = styled(MenuOutlined)`
+color: white;
+font-size: 30px;
 `;
