@@ -3,9 +3,7 @@ import { Layout } from "antd";
 import styled from "styled-components";
 import Router from "next/router";
 import NProgress from "nprogress";
-import { Breakpoint, BreakpointProvider } from 'react-socks';
 import Header from "./Header";
-import HeaderMobile from "./HeaderMobile";
 import { BLUE, ORANGE, FONT_FAMILY } from "../constants/style";
 
 export default function Page({ title, children }) {
