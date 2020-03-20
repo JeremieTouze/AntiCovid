@@ -11,7 +11,7 @@ const Home = () => {
                 <Breakpoint small down>
                     <HomeMobile/>
                 </Breakpoint>
-                <Breakpoint large up>
+                <Breakpoint medium up>
                     <HomeImage />
                     <HomeDescription />
                 </Breakpoint>
