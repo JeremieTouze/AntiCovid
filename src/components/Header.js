@@ -7,15 +7,25 @@ import { ORANGE } from "@constants/style";
 
 import Logo from "./Logo";
 import BaseButton from "./Button";
+import Title from "./Title";
 
-export default function Header() {
+export default function Header({ title }) {
     const router = useRouter();
 
     return (
         <Container>
             <Row align="middle" className="text-center">
                 <Col
-                    xs={{ span: 6, order: 3 }}
+                    xs={{ span: 1, order: 1 }}
+                    sm={{ span: 0, order: 1 }}
+                    lg={{ span: 0, order: 1 }}
+                >
+                    <div onClick={() => router.push(HOME)} className="cursor-pointer">
+                        <p>=</p>
+                    </div>
+                </Col>
+                <Col
+                    xs={{ span: 0, order: 3 }}
                     sm={{ span: 6, order: 3 }}
                     lg={{ span: 6, order: 1 }}
                 >
@@ -27,16 +37,31 @@ export default function Header() {
                     </ContactButton>
                 </Col>
                 <Col
-                    xs={{ span: 24, order: 1 }}
+                    xs={{ span: 0, order: 2 }}
                     sm={{ span: 24, order: 1 }}
-                    lg={{ order: 2, span: 12 }}
+                    lg={{ span: 12, order: 2  }}
                 >
                     <div onClick={() => router.push(HOME)} className="cursor-pointer">
                         <Logo />
                     </div>
                 </Col>
                 <Col
-                    xs={{ span: 18, order: 2 }}
+                    xs={{ span: 22, order: 2 }}
+                    sm={{ span: 0, order: 1 }}
+                    lg={{ span: 0, order: 2  }}
+                >
+                      {title === "Accueil" ? (
+                        <div onClick={() => router.push(HOME)} className="cursor-pointer">
+                            <Logo />
+                        </div>) : (
+                            <div>
+                                <Title>{title}</Title>
+                            </div>
+                        )
+                    }
+                </Col>
+                <Col
+                    xs={{ span: 0, order: 2 }}
                     sm={{ span: 18, order: 2 }}
                     lg={{ span: 6, order: 3 }}
                 >
