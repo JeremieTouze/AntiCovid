@@ -16,7 +16,7 @@ const DescriptionsStatus = ({ data }) => {
                 ))
             ) : (
                 <span
-                    style={{ color: "white", padding: "5px 10px", borderRadius: 10 }}
+                    style={{ color: "white", padding: "5px 10px", borderRadius: 10,  }}
                     className="bg-orange"
                     key={1}
                 >

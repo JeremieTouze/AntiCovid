@@ -39,7 +39,7 @@ const DescriptionCard = ({ recordId }) => {
                             <Container>
                                 <p>{data["Description"]}</p>
                                 {components.map((Component, index) => (
-                                    <Component key={index} data={data} />
+                                    <Component key={index} data={data}/>
                                 ))}
 
                                 <Disqus.DiscussionEmbed
