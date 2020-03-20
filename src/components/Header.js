@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Row, Col } from "antd";
 import { useRouter } from "next/router";
 
-import { NAVLINKS, CONTACT, HOME } from "@constants/routes";
+import { NAVLINKS, CONTACT, HOME, MENUMOBILE } from "@constants/routes";
 import { ORANGE } from "@constants/style";
 
+import { MenuOutlined } from "@ant-design/icons";
 import Logo from "./Logo";
 import BaseButton from "./Button";
 import Title from "./Title";
@@ -19,9 +20,10 @@ export default function Header({ title }) {
                     xs={{ span: 1, order: 1 }}
                     sm={{ span: 0, order: 1 }}
                     lg={{ span: 0, order: 1 }}
+    
                 >
-                    <div onClick={() => router.push(HOME)} className="cursor-pointer">
-                        <p>=</p>
+                    <div onClick={() => router.push(MENUMOBILE)} className="cursor-pointer" style={{ width: "auto", height: "auto" }}>
+                        <MenuOutlined style={{ fontSize: 30}} />
                     </div>
                 </Col>
                 <Col
@@ -39,7 +41,7 @@ export default function Header({ title }) {
                 <Col
                     xs={{ span: 0, order: 2 }}
                     sm={{ span: 24, order: 1 }}
-                    lg={{ span: 12, order: 2  }}
+                    lg={{ span: 12, order: 2 }}
                 >
                     <div onClick={() => router.push(HOME)} className="cursor-pointer">
                         <Logo />
@@ -48,9 +50,9 @@ export default function Header({ title }) {
                 <Col
                     xs={{ span: 22, order: 2 }}
                     sm={{ span: 0, order: 1 }}
-                    lg={{ span: 0, order: 2  }}
+                    lg={{ span: 0, order: 2 }}
                 >
-                      {title === "Accueil" ? (
+                    {title === "Accueil" ? (
                         <div onClick={() => router.push(HOME)} className="cursor-pointer">
                             <Logo />
                         </div>) : (
