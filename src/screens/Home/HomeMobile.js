@@ -1,6 +1,5 @@
 import { Row, Col, Card } from "antd";
 import styled from "styled-components";
-
 import { BLUE, GRAY, DARKGRAY } from "@constants/style";
 import BaseCard from "@components/Card";
 
