@@ -10,7 +10,7 @@ import Logo from "./Logo";
 import BaseButton from "./Button";
 import Title from "./Title";
 
-export default function Header({ title }) {
+export default function Header({ title, displayMobileHeader }) {
     const router = useRouter();
 
     return (
@@ -21,7 +21,7 @@ export default function Header({ title }) {
                     sm={{ span: 0, order: 1 }}
                     lg={{ span: 0, order: 1 }}
                 >
-                    <div onClick={() => router.push(HOME)} className="cursor-pointer">
+                    <div onClick={displayMobileHeader} className="cursor-pointer">
                         <MenuIcon />
                     </div>
                 </Col>

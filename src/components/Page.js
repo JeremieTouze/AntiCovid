@@ -6,7 +6,9 @@ import NProgress from "nprogress";
 import Header from "./Header";
 import { BLUE, ORANGE, FONT_FAMILY } from "../constants/style";
 
-export default function Page({ title, children }) {
+export default function Page({ title, noHeader = false, children }) {
+    const [mobileHeader, setMobileHeader] = React.useState(false);
+
     React.useEffect(() => {
         Router.onRouteChangeStart = () => {
             NProgress.start();
@@ -22,6 +24,8 @@ export default function Page({ title, children }) {
         };
     }, []);
 
+    const toggleMobileHeader = (display) => () => setMobileHeader(display)
+
     return (
         <>
             <Head>
@@ -34,10 +38,8 @@ export default function Page({ title, children }) {
                 <title>{title}</title>
             </Head>
             <Body>
-                <Header title={title} />
-                <Container>{children}</Container>
-                {/* <Header />
-                <Container>{children}</Container> */}
+                {!noHeader && <Header title={title} displayMobileHeader={toggleMobileHeader(true)} />}
+                <Container>{!mobileHeader && children}</Container>
             </Body>
         </>
     );
