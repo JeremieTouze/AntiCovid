@@ -1,6 +1,6 @@
 import { Row, Col, Card } from "antd";
 import styled from "styled-components";
-import { BLUE, GRAY, DARKGRAY } from "@constants/style";
+import { BLUE, GRAY, DARKGRAY,  BOXSHADOW} from "@constants/style";
 import BaseCard from "@components/Card";
 
 const data = [
@@ -46,7 +46,8 @@ const HomeMobile = () => (
 
 )
 const HomeMobileContainer = styled(Row)`
-    padding: 0px 30px;
+    // padding: 0px 30px;
+    margin: 0px 0px !important;
 `
 const DescriptionContainer = styled.span`
     .description {
@@ -58,13 +59,12 @@ const DescriptionContainer = styled.span`
 
 `
 const CardContainer = styled(BaseCard)`
-    box-shadow: 5px 5px 10px 0px ${DARKGRAY};
+    box-shadow: ${BOXSHADOW};
     padding: 20px 0px;
     margin: 10px  0px;
     .title{
         color: ${BLUE};
         font-size: 23px !important;
-        font-weight: bold;
         padding-top: 10px;
         padding-bottom: 10px;
     }

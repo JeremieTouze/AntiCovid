@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
       
 
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 767px) {
             background-image: url('/backgroundWaveMobile.png');
             background-repeat: no-repeat;
             background-position: left top;
@@ -104,6 +104,9 @@ const GlobalStyle = createGlobalStyle`
     
     .text-orange {
         color: ${ORANGE};
+    }
+    .text-white {
+        color: white !important;
     }
 
     .bg-green {
